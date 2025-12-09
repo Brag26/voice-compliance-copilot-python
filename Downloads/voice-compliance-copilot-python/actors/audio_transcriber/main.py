@@ -7,7 +7,6 @@ from apify import Actor
 OUTPUT_PATH = Path("outputs/pairs_loaded.json")
 
 async def main():
-    async with Actor:
         input_data = await Actor.get_input() or {}
         audio_files = input_data.get('audio_files', [])
         store = await Actor.open_key_value_store()

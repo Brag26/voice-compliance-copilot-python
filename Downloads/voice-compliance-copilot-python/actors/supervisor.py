@@ -1,6 +1,8 @@
-import os
 import asyncio
 from apify import Actor
+
+from actors.audio_transcriber.main import main as audio_main
+from actors.prompt_response_loader.main import main as demo_main
 
 async def main():
     async with Actor:
@@ -10,12 +12,9 @@ async def main():
         print(f"Starting pipeline in {mode} mode...")
 
         if mode == "audio":
-            os.system("python actors/audio_transcriber/main.py")
+            await audio_main()   # ✅ SAME PROCESS → DATASET WILL WORK
         else:
-            os.system("python actors/prompt_response_loader/main.py")
-
-        os.system("python actors/quality_judge/main.py")
-        os.system("python actors/report_generator/main.py")
+            demo_main()
 
         print("Pipeline completed.")
 
