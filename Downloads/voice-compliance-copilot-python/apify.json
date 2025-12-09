@@ -1,0 +1,6 @@
+{
+  "actorSpecification": 1,
+  "runCommand": "python actors/supervisor.py",
+  "buildTag": "latest",
+  "dockerfile": "Dockerfile"
+}
