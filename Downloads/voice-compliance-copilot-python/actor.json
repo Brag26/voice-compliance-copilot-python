@@ -1,0 +1,7 @@
+{
+  "actorSpecification": 1,
+  "name": "voice-compliance-copilot-python",
+  "title": "Voice Compliance Copilot (Audio + Text AI Audit)",
+  "version": "2.0",
+  "buildTag": "latest"
+}
